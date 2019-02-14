@@ -1,0 +1,467 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+.ea-korea-hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NanumSquare';
+}
+
+.ea-korea-hero .hero1{
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.ea-korea-hero .hero2{
+    font-size: 1.3em;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 30px auto;
+}
+
+
+.ea-korea-policydata{
+    display: flex;
+    padding: 60px;
+    transform: translateZ(0);
+}
+
+/* policy keywords */
+
+.ea-korea-policykeywords{
+    display: none;
+    flex-direction: column;
+    color: #252525;
+    font-size: 1.6em;
+    padding-left: 10%;
+    width: 50%;
+}
+
+.ea-korea-policykeywords .keywords-guide{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-bottom: 40px;
+}
+
+.keywords-guide .help{
+    font-size: 0.5em;
+    margin-top: 15px;
+}
+
+.ea-korea-policykeywords .keywords-container{
+    font-size: 0.56em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.keywords-container .policygroup{
+    margin-bottom: 15px;
+}
+
+.keywords-container .policyinfo{
+    display: flex;
+}
+
+.keywords-container .policytitle{
+    padding: 0 7px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    border-left: 3px solid #505050;
+    color: #202020;
+    margin-right: 5px;
+}
+
+.keywords-container .policykeywords-action-fold{
+    padding: 0 8px;
+}
+
+.keywords-container .policygroup[banana-status="folded"] .fold{
+    display: none;
+}
+
+.keywords-container .policygroup[banana-status="unfolded"] .unfold{
+    display: none;
+}
+
+.keywords-container .policykeywords-action-fold p{
+    font-family: FontAwesome;
+    color: #505050;
+    margin-top: 1px;
+}
+
+.keywords-container .keywords{
+    display: none;
+}
+
+.keywords-container .policygroup[banana-status="unfolded"] .keywords{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.keywords-container .keyword{
+    margin: 3px 8px;
+    padding: 8px 0;
+    flex-shrink: 0;
+    position: relative;
+    color: #202020;
+    border-bottom: 2px solid #505050;
+}
+
+.keywords-container .keyword span{
+    display: none;
+}
+
+.keywords-container .keyword[banana-status="highlighted"]{
+    background: #202020;
+    color: #fff;
+    padding: 8px;
+    border-bottom: none;
+}
+
+.keywords-container .keyword[banana-status="highlighted"] span{
+    display: block;
+}
+
+@media all and (max-width: 374px) and (max-height: 600px) {
+
+    .ea-korea-policykeywords{
+        font-size: 1.5em;
+    }
+
+    .ea-korea-policykeywords .keywords-container{
+        font-size: 0.58em;
+    }
+
+} 
+
+
+@media all and (max-width: 1099px) {
+
+    .ea-korea-policydata{
+        display: flex;
+        padding-top: 0;
+        flex-direction: column;
+    }
+
+    .ea-korea-policykeywords{
+        width: auto;
+        padding: 0% 10%;
+    }
+
+    .ea-korea-policykeywords .keywords-guide{
+        margin-top: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .ea-korea-policykeywords .keywords-guide .help{
+        flex-basis: 100%;
+    }
+
+    .ea-korea-policykeywords .keywords-container{
+        margin-bottom: 50px;
+    }
+
+}
+
+/* policy list */
+.ea-korea-policylist{
+    color: #252525;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ea-korea-policylist .policylist-action-fold{
+    margin-top: 0px;
+}
+
+@media all and (max-width: 1099px) {
+
+    .ea-korea-policylist{
+        width: auto;
+        margin-left: 0;
+        padding: 0% 10%;
+    }
+
+    .ea-korea-policylist .policylist-action-fold{
+        margin-top: 40px;
+    }
+
+}
+
+.ea-korea-policylist .policylist-action-fold span{
+    padding: 0 7px;
+    margin-bottom: 10px;
+    border-left: 3px solid #777777;
+    color: #777777;
+    margin-right: 5px;
+}
+
+.ea-korea-policylist .policylist-categories{
+    margin-top: 20px;
+}
+
+.policylist-categories > p{
+    padding: 0 7px;
+    margin-bottom: 10px;
+    border-left: 3px solid #505050;
+    color: #202020;
+    margin-right: 5px;
+}
+
+.ea-korea-policylist .policylist-categories .categories{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+}
+
+.policylist-categories .category{
+    margin: 5px 8px;
+    padding: 8px 0;
+    flex-shrink: 0;
+    position: relative;
+    border-bottom: 2px solid #505050;
+}
+
+.ea-korea-policylist #policygroup{
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #9e9e9e;
+}
+
+@media all and (max-width: 374px) and (max-height: 600px) {
+
+    .ea-korea-policylist #policygroup{
+        font-size: 0.88em;
+    }
+
+} 
+
+.ea-korea-policylist .policy-container{
+    margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.ea-korea-policylist .policy-container:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #d2d2d2;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.policy-container .policyname{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.policy-container .policy-strategycontainer{
+    padding: 20px 0 20px 0;
+}
+
+.policy-container .policy-strategycontainer:nth-last-child(1):after{
+    display: none;
+}
+
+.policy-strategycontainer .substrategyinfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.policy-strategycontainer .substrategyname{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #2599ca;
+}
+
+.policy-strategycontainer .substrategy-action-fold{
+    padding: 0 8px;
+}
+
+.policy-strategycontainer[banana-status="folded"] .fold{
+    display: none;
+}
+
+.policy-strategycontainer[banana-status="unfolded"] .unfold{
+    display: none;
+}
+
+.policy-strategycontainer .substrategy-action-fold p{
+    font-family: FontAwesome;
+    color: #03A9F4;
+    margin-top: 1px;
+}
+
+.policy-strategycontainer[banana-status="folded"] .strategy{
+    display: none;
+}
+
+.policy-strategycontainer[banana-status="unfolded"] .strategy{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.policy-strategycontainer .strategy .task{
+    padding: 20px;
+    position: relative;
+    margin: 15px 30px 15px 0;
+    border: 4px solid #000;
+    width: 300px;
+    height: 300px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ea-korea-policylist[banana-status="highlighted"] .task{
+    display: none;
+}
+
+.ea-korea-policylist[banana-status="highlighted"] .task[banana-status="highlighted"]{
+    display: block;
+}
+
+.policy-strategycontainer .task .taskinfo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+.policy-strategycontainer .task .taskname{
+    align-self: baseline;
+    font-size: 1.15em;
+    background: #000;
+    color: #fff;
+    padding: 8px 10px;
+}
+
+.policy-strategycontainer .task .departmentinfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0.82em;
+}
+
+.policy-strategycontainer .departmentinfo .departmentname{
+    padding: 6px 10px;
+    display: flex;
+    align-self: baseline;
+    background: #2c2c2c;
+    color: #fff;
+}
+
+.policy-strategycontainer .taskstatus{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15%;
+    height: 9px;
+    display: flex;
+    flex-direction: column;
+    background: #ececec;
+}
+
+.policy-strategycontainer .taskstatusbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 9px;
+    background: #1E88E5;
+}
+
+.policy-strategycontainer .taskstatus p{
+    color: #000;
+    position: absolute;
+    top: 13px;
+    left: 0;
+    font-size: 0.8em;
+}
+
+.policy-strategycontainer .descriptions{
+    text-align: initial;
+}
+
+.policy-strategycontainer .descriptions li{
+    padding: 7px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.policy-strategycontainer .descriptions li .descriptiontext{
+    max-width: 75%;
+}
+
+.policy-strategycontainer .descriptions li .descriptionstatus{
+    font-size: 0.85em;
+    flex-shrink: 0;
+    background: #00c1ff;
+    color: #fff;
+    align-self: baseline;
+    padding: 8px;
+    align-items: flex-end;
+    margin-right: 15px;
+    max-width: 45%;
+}
+
+.policy-strategycontainer .descriptions li .description-action-link{
+    padding: 6px 0 6px 8px;
+}
+
+.policy-strategycontainer .descriptions li .description-action-link p{
+    font-family: FontAwesome;
+    color: #505050;
+    margin-top: 1px;
+}
+
+.policy-strategycontainer .descriptions p[banana-taskcode="none"]{
+    background: #e4e4e4;
+    color: #252525;
+}
+
+.policy-strategycontainer .descriptions p[banana-taskcode="await"]{
+    background: #607D8B;
+}
+
+.policy-strategycontainer .descriptions p[banana-taskcode="wip"]{
+    background: #1976d2;
+}
+
+.policy-strategycontainer .descriptions p[banana-taskcode="discussing"]{
+    background: #8BC34A;
+}
+
+.policy-strategycontainer .descriptions p[banana-taskcode="congress"]{
+    background: #FF5722;
+}
+
+.policy-strategycontainer .descriptions p[banana-taskcode="question"]{
+    background: #9c27b0;
+}
+
+.policy-strategycontainer .descriptions p[banana-taskcode="done"]{
+    background: #00c1ff;
+}

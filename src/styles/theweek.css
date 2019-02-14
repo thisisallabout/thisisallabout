@@ -1,0 +1,413 @@
+.theweek-share.social-likes {
+    z-index: 9999901;
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    padding: 4px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theweek-hero{
+    padding: 15% 0px 6% 120px;
+    display: flex;
+    align-items: center;
+}
+
+.theweek-hero .hero1{
+    font-size: 2.3em;
+    font-weight: 700;
+    background: linear-gradient(to right, #0083e0 , #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.theweek-hero .hero2{
+    font-size: 1.5em;
+    word-wrap: break-word;
+    margin: 30px auto;
+}
+
+.theweek-hero .theweek-herotpdetails{
+    font-size: 1em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #929292;
+}
+
+/* data */
+.theweek-analysis-data{
+    display: flex;
+    margin: 0 120px;
+}
+
+.theweek-analysis-data.hidden{
+    display: none;
+}
+
+.theweek-analysis-data .analysis-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.theweek-analysis-data .analysis-list .analysis-item{
+    margin: 30px 0 0 0;
+    position: relative;
+}
+
+.theweek-analysis-data .analysis-list .analysis-item .item-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: baseline;
+}
+
+.theweek-analysis-data .analysis-list .analysis-item .item-bg{
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    top: 0;
+    left: 60px;
+    z-index: -1;
+}
+
+.theweek-analysis-data .analysis-list .analysis-item .item-theme{
+    position: relative;
+    display: flex;
+    width: 37%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-shrink: 0;
+    padding: 25px;
+}
+
+.theweek-analysis-data .analysis-list .theme-header{
+    align-self: baseline;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+.theweek-analysis-data .analysis-list .analysis-item .themes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-self: baseline;
+    margin-top: 16px;
+}
+
+.theweek-analysis-data .analysis-list .analysis-item .item-peakinfo{
+    position: relative;
+    display: none;
+    width: 28%;
+    height: 5%;
+}
+
+.theweek-analysis-data .analysis-list .analysis-item .toparticle-content-container{
+    position: relative;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.theweek-analysis-data .analysis-list .toparticle-object{
+    position: relative;
+    padding: 4px 0;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.theweek-analysis-data .analysis-list .toparticle-object .article-title{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.theweek-analysis-data .analysis-list .toparticle-object .article-origin{
+    font-size: 0.85em;
+    margin-top: 3px;
+    color: #8a8a8a;
+}
+
+/* tp details */
+.theweek-tpdetails{
+    position: fixed;
+    width: 80%;
+    padding: 0 10%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    background: #fff;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+
+.theweek-tpdetails.opened{
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 80%;
+    padding: 120px 10%;
+    height: calc(100% - 240px);
+    opacity: 1;
+    z-index: 9999902;
+}
+
+.theweek-tpdetails .tpdetails-reveal > p{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.theweek-tpdetails .tpdetails-text{
+    margin-top: 15px;
+}
+
+.theweek-tpdetails .tpdetails-text > p{
+    margin-top: 6px;
+}
+
+.theweek-tpdetails .datasets{
+    border-top: 1px solid #e4e4e4;
+    margin-top: 20px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.theweek-tpdetails .datasets > a{
+    display: flex;
+}
+
+.theweek-tpdetails .datasets > a > p{
+    text-transform: uppercase;
+    background: #00bdec;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 8px;
+    align-self: baseline;
+}
+
+.theweek-tpdetails .tpdetails-close-action{
+    display: none;
+}
+
+.theweek-tpdetails .tpdetails-close-action{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    transform: translateZ(0);
+}
+
+.theweek-tpdetails .tpdetails-close-action .icon{
+    width: 15px;
+    height: 13px;
+    background-image: url('../resources/symbol_close.png');
+    background-size: cover;
+}
+
+.theweek-copyrights {
+    padding: 30px 0 30px 120px;
+    font-size: 0.7em;
+    width: 80%;
+    color: #868686;
+}
+
+@media all and (max-width: 980px) {
+    .theweek-share.social-likes {
+        z-index: 1;
+        left: initial;
+        padding: 0 25px 0 20px;
+        margin-bottom: 20px;
+        top: initial;
+        flex-direction: row;
+        transform: none;
+        position: relative;
+    }
+
+    .theweek-hero{
+        padding: 44% 30px 18%;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: all 200ms ease;
+    }
+
+    .theweek-hero.highlighted{
+        max-height: 35vh;
+        opacity: 0;
+    }
+
+    .theweek-hero .hero1{
+        font-size: 1.8em;
+    }
+
+    .theweek-hero .hero1.strike:after {
+        height: 3px;
+    }
+
+    .theweek-hero .hero2{
+        font-size: 1em;
+    }
+
+    .theweek-hero .theweek-herotpdetails{
+        font-size: 0.97em;
+    }
+
+    .theweek-analysis-data {
+        display: flex;
+        margin: 30px;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item{
+        margin: 0;
+        transition: all 200ms ease;
+    }
+
+    .theweek-analysis-data .analysis-list.highlighted .analysis-item{
+        opacity: 0.3;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected{
+        display: block;
+        opacity: 1;
+        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item .item-info{
+        margin-left: 0;
+        color: #fff;
+        transition: all 200ms ease;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .item-info{
+        flex-direction: column;
+        align-items: flex-start;
+        color: #000;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item .item-bg{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .item-bg{
+        display: none;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item .item-theme{
+        width: 100%;
+        justify-content: center;
+        padding: 35px 0;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .item-theme{
+        height: auto;
+        width: auto;
+        padding: 30px 30px;
+        box-shadow: none;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item .theme-header{
+        font-size: 1.35em;
+        padding: 30px;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .theme-header{
+        font-size: 1.15em;
+        padding: 0;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item .themes{
+        display: none;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .themes{
+        display: flex;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item .toparticle-content-container{
+        display: none;
+        transition: all 200ms ease;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .toparticle-content-container{
+        display: block;
+        padding: 0 30px;
+        font-size: 0.9em;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item .toparticle-content-container .toparticle-month{
+        display: flex;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 200ms ease;
+        transition-delay: 250ms;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .toparticle-content-container .toparticle-month.selected{
+        display: flex;
+        margin-left: 0;
+        justify-content: center;
+        max-height: 1000px;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected:nth-child(2n) .toparticle-content-container .toparticle-month{
+        flex-direction: row;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .toparticle-month .toparticle-object:before{
+        content: '';
+        display: block;
+        padding-top: 60%;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .toparticle-month .toparticle-object{
+        width: 90%;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .item-close-action{
+        margin: 0 auto;
+        width: 17px;
+        height: 15px;
+        padding: 20px;
+        margin-top: -10px;
+    }
+
+    .theweek-analysis-data .analysis-list .analysis-item.selected .item-close-action .icon{
+        width: 17px;
+        height: 15px;
+        background-image: url('../resources/symbol_close.png');
+        background-size: cover;
+    }
+
+    .theweek-copyrights {
+        padding: 30px 30px;
+    }
+}

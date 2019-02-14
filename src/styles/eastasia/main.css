@@ -1,0 +1,102 @@
+.ea-all-hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.ea-all-hero .hero1{
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.ea-all-hero .hero2{
+    font-size: 1.3em;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.ea-all-list{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 0 30vh 0;
+    margin-top: -10vh;
+}
+
+.ea-all-list > a{
+    position: relative;
+    margin: 0 20px 0 0;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+    width: 23%;
+    flex-shrink: 0;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.ea-all-list > a:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.ea-all-list .ea-all-contentitem{
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    transform: translateY(-50%);
+}
+
+.ea-all-list .ea-all-contentitem .title{
+    font-size: 1.2em;
+    font-weight: 600;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.ea-all-list .ea-all-contentitem[banana-contentid="ea-all-korea"] .title:after{
+    content: 'in korean';
+    text-transform: uppercase;
+    background: #00bdec;
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    margin-top: 8px;
+}
+
+.ea-all-list .ea-all-contentitem .desc{
+    margin-top: 20px;
+}
+
+@media all and (max-width: 980px) {
+    .ea-all-hero{
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .ea-all-hero .hero1{
+        font-size: 1.85em;
+    }
+
+    .ea-all-hero .hero2{
+        font-size: 1.2em;
+    }
+
+    .ea-all-list{
+        flex-wrap: wrap;
+        padding: 0 0 10% 0;
+    }
+
+    .ea-all-list > a{
+        width: 280px;
+        margin: 0 0 20px 0;
+    }
+}
