@@ -8,7 +8,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
     entry: {
-        vendor: ['babel-polyfill', 'whatwg-fetch'],
+        vendor: ['whatwg-fetch'],
         index: ['./src/js/index.js']
     },
     plugins: [
@@ -36,6 +36,13 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                }
+            },
             {
                 test: /\.css$/,
                 use: [

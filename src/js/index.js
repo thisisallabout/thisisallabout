@@ -2,6 +2,7 @@ import styles from '../styles/core.css';
 import { html, render } from 'lit-html';
 import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
+import "core-js/stable";
 require('../resources/favicons/android-chrome-192x192.png');
 require('../resources/favicons/android-chrome-384x384.png');
 require('../resources/favicons/apple-touch-icon.png');
@@ -27,7 +28,8 @@ const render_core = () => {
     ];
 
     const labSections = [
-        { id: 'nav-section-datatodaycluster', name: 'HourlyClusters', path: 'lab?type=hourlycluster' }
+        { id: 'nav-section-datatodaycluster', name: 'HourlyClusters', path: 'lab?type=hourlycluster' },
+        { id: 'nav-section-datatodaycluster', name: 'Backend', path: 'lab' }
     ];
 
     const top_frame_markup = () => html`
@@ -97,7 +99,7 @@ const render_core = () => {
 
 render_core();
 var currentpath_whole = window.location.pathname;
-var currentpath_type = window.location.hash.substring(1);
+var currentpath_type = window.location.hash.split('?')[0].substring(1);
 
 $(window).on('hashchange', function() {
     window.location.reload();

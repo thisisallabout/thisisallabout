@@ -47,7 +47,7 @@
 .today-head-data .head-item-container{
     position: relative;
     display: flex;
-    overflow-x: scroll;
+    flex-wrap: wrap;
     padding: 35px 65px 35px 65px;
 }
 
