@@ -58,7 +58,7 @@ const render_core = () => {
                     <p class="section-guide">PROJECTS</p>
                     <ul class="sections-list projects">
                         ${projectSections.map((i) => html`
-                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                            <li data-sectionid="${i.id}"><a href="#${i.path}">${i.name}</a></li>
                         `
         )}
                     </ul>
@@ -68,7 +68,7 @@ const render_core = () => {
                     <p class="section-guide">DEVELOPER</p>
                     <ul class="sections-list lab">
                         ${labSections.map((i) => html`
-                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                            <li data-sectionid="${i.id}"><a href="#${i.path}">${i.name}</a></li>
                         `
         )}
                     </ul>
@@ -76,9 +76,8 @@ const render_core = () => {
 
                 <div class="sections-group about">
                     <ul class="sections-tiaainfo">
-                        <li><a href="/about">About</a></li>
-                        <li><a href="http://facebook.com/thisisallabout">Facebook</a></li>
-                        <li><a href="mailto:hello@thisisallabout.com">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="mailto:toddstonefieldoh@gmail.com">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -98,7 +97,11 @@ const render_core = () => {
 
 render_core();
 var currentpath_whole = window.location.pathname;
-var currentpath_type = window.location.href.split('#')[1];
+var currentpath_type = window.location.hash.substring(1);
+
+$(window).on('hashchange', function() {
+    window.location.reload();
+});
 
 if (currentpath_type !== undefined && currentpath_type !== '') {
     import('./' + currentpath_type).then(module => {
