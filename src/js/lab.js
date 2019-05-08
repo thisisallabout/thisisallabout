@@ -13,7 +13,7 @@ export function init_render() {
     if (getpathparam('type') == '' && getpathparam('type') == null) {
         window.location.href = 'https://github.com/toddoh/thisisallabout_backend';
     } else if (getpathparam('type') == 'hourlycluster') {
-        window.location.href = 'https://github.com/toddoh/thisisallabout_dailyclusters';
+        window.location.href = 'https://github.com/toddoh/thisisallabout_dailycluster';
     } else {
         window.location.href = 'https://github.com/toddoh/thisisallabout_backend';
     }
