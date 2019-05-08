@@ -48,7 +48,7 @@ const render_core = () => {
                     <p class="section-guide">REGULAR</p>
                     <ul class="sections-list">
                         ${contentSections.map((i) => html`
-                            <li data-sectionid="${i.id}"><a href="/${i.path}">${i.name}</a></li>
+                            <li data-sectionid="${i.id}"><a href="#${i.path}">${i.name}</a></li>
                         `
         )}
                     </ul>

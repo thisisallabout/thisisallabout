@@ -83,8 +83,6 @@ export function init_render() {
     ];
     var month_render_index = ["2017-01", "2017-02", "2017-03", "2017-04", "2017-05", "2017-06", "2017-07", "2017-08", "2017-09", "2017-10", "2017-11", "2017-12", "2018-01"].reverse();
 
-    if (getpathparam('type') == '' && getpathparam('type') !== null) window.history.replaceState({}, null, '/whattrumpsaid/');
-
     for (var i=0; i < month_render_index.length; i++) {
         var markup_init_container = document.createElement("div");
         markup_init_container.className = "whattrumpsaid-analysis-data";
@@ -108,16 +106,6 @@ const getpathparam = (name, url) => {
     var regex = new RegExp( regexS );
     var results = regex.exec( url );
     return results == null ? null : results[1];
-}
-
-window.onpopstate = function() {
-    if (window.innerDocClick) {
-        window.innerDocClick = false;
-    } else {
-        if (window.location.pathname == '/whattrumpsaid/' || window.location.pathname == '/whattrumpsaid') {
-            page_go_back();
-        }
-    }
 }
 
 const render_list = (moindex, opt) => {
@@ -232,7 +220,6 @@ const render_data = (month) => {
         dataset_url = './data_publish_ready/trumptweeted/' + month + '.json';
     }
 
-    window.history.pushState({}, null, '/whattrumpsaid/' + month + '/');
     const base_markup = () => html`
         <div class="whattrumpsaid-analysis-data-action-close-pre">
             <div class="icon"></div>
@@ -246,7 +233,6 @@ const render_data = (month) => {
         document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
         document.documentElement.className = '';
         document.querySelector('.minion-dataload').setAttribute('status', '');
-        window.history.pushState({}, null, '/whattrumpsaid/');
     });
 
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -356,7 +342,6 @@ const render_data = (month) => {
             getParents(this, '.whattrumpsaid-analysis-data')[0].classList.remove('selected');
             document.querySelector('.whattrumpsaid-analysis-group').classList.remove('selectionmode');
             document.documentElement.className = '';
-            window.history.pushState({}, null, '/whattrumpsaid/');
         });
 
         socialLikes(targetnode.querySelector('.whattrumpsaid-analysis-data-action-share'));
