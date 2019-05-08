@@ -98,9 +98,9 @@ const render_core = () => {
 
 render_core();
 var currentpath_whole = window.location.pathname;
-var currentpath_type = window.location.pathname.split('/')[1];
+var currentpath_type = window.location.pathname.split('#')[1];
 
-if (currentpath_type !== '') {
+if (currentpath_type !== undefined) {
     import('./' + currentpath_type).then(module => {
         module.init_render();
         document.querySelector('.minion-dataload').setAttribute('status', '');

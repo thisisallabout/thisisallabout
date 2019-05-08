@@ -11,10 +11,10 @@ export function init_render() {
     }
 
     if (getpathparam('type') == '' && getpathparam('type') == null) {
-        window.location.href = 'https://github.com/thisisallabout/';
+        window.location.href = 'https://github.com/toddoh/thisisallabout_backend';
     } else if (getpathparam('type') == 'hourlycluster') {
-        window.location.href = 'https://github.com/thisisallabout/hourly_newscluster_today';
+        window.location.href = 'https://github.com/toddoh/thisisallabout_dailyclusters';
     } else {
-        window.location.href = 'https://github.com/thisisallabout/';
+        window.location.href = 'https://github.com/toddoh/thisisallabout_backend';
     }
 }

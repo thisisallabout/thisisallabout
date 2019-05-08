@@ -1,10 +1,8 @@
 # minion
+Full front-end set for [thisisallabout](https://thisisallabout.com), a non-profit data journalism project.
 
-## Technical details
-It renders thisisallabout backend data and published clustering data files with rich visualizations. 
-
-## Stacks
-* webpack
+## Libraries
+* webpack/babel
 * lit-html for rendering
 * a node "server.js" app for url routing
 * a node app "stuart" for backend database api (for internal editorial functions)
@@ -17,5 +15,10 @@ It renders thisisallabout backend data and published clustering data files with 
 3. node server.js
 4. Go to localhost:3000.
 
-## Copyright
-* Data file and clustering result: MIT License. Owned by THISISALLABOUT (Seungyun Todd Oh).
+## License
+
+* MIT License
+
+## Maintainer
+
+Todd Oh (toddstonefieldoh@gmail.com) [twitter](https://twitter.com/_toddoh)

@@ -124,9 +124,9 @@ const render_list = (moindex, opt) => {
     var list_data = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/data_publish_ready/trumptweeted/list_data.json';
+        dataset_url = './data_publish_ready/trumptweeted/list_data.json';
     } else {
-        dataset_url = 'https://thisisallabout.com/data_publish_ready/trumptweeted/list_data.json';
+        dataset_url = './data_publish_ready/trumptweeted/list_data.json';
     }
     
     document.querySelector('.minion-dataload').setAttribute('status', 'dl_d_1');
@@ -227,9 +227,9 @@ const render_data = (month) => {
     var trump_data = null;
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
-        dataset_url = '//localhost:3000/data_publish_ready/trumptweeted/' + month + '.json';
+        dataset_url = './data_publish_ready/trumptweeted/' + month + '.json';
     } else {
-        dataset_url = 'https://thisisallabout.com/data_publish_ready/trumptweeted/' + month + '.json';
+        dataset_url = './data_publish_ready/trumptweeted/' + month + '.json';
     }
 
     window.history.pushState({}, null, '/whattrumpsaid/' + month + '/');

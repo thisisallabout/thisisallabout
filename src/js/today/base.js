@@ -83,9 +83,9 @@ const render_head_data = () => {
     var dataset_url;
     if (process.env.NODE_ENV == 'dev') {
         // debugging dataset_url = '//localhost:3000/data_publish_ready/today/today_data.json';
-        dataset_url = 'https://thisisallabout.com/data_publish_ready/today/today_data.json';
+        dataset_url = './data_publish_ready/today/today_data.json';
     } else {
-        dataset_url = 'https://thisisallabout.com/data_publish_ready/today/today_data.json';
+        dataset_url = './data_publish_ready/today/today_data.json';
     }
 
     fetch(dataset_url).then(response => response.text()).then(function(text) {

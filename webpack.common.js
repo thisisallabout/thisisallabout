@@ -16,7 +16,7 @@ module.exports = {
             format: 'Build [:bar] :percent (:elapsed seconds)',
             clear: false,
         }),
-        new CleanWebpackPlugin(['dist'], { watch: false }),
+        new CleanWebpackPlugin(['docs'], { watch: false }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new MiniCssExtractPlugin({
             filename: 'styles/[name].[contenthash].css'
@@ -29,8 +29,8 @@ module.exports = {
         new webpack.HashedModuleIdsPlugin()
     ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: "/",
+        path: path.resolve(__dirname, 'docs'),
+        publicPath: "./",
         filename: 'scripts/[name].[chunkhash].js',
         chunkFilename: 'scripts/[name].[chunkhash].js'
     },
