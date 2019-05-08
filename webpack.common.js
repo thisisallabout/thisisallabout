@@ -45,7 +45,7 @@ module.exports = {
             },
             {
                 test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-                loader: 'file-loader?name=[name].[ext]&outputPath=res/&publicPath=./res/'
+                loader: 'file-loader?name=[name].[ext]&outputPath=res/&publicPath=../res/'
             }
         ],
     }

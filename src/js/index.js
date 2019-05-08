@@ -100,7 +100,7 @@ render_core();
 var currentpath_whole = window.location.pathname;
 var currentpath_type = window.location.href.split('#')[1];
 
-if (currentpath_type !== undefined || currentpath_type !== '') {
+if (currentpath_type !== undefined && currentpath_type !== '') {
     import('./' + currentpath_type).then(module => {
         module.init_render();
         document.querySelector('.minion-dataload').setAttribute('status', '');
