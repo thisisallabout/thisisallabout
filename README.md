@@ -1,5 +1,5 @@
 # minion
-Full front-end set for [thisisallabout](https://toddoh.com/thisisallabout), a non-profit data journalism project. It was originally hosted on now-offline thisisallabout.com. You can now access it live through Github Pages.
+Full front-end set for [thisisallabout](https://thisisallabout.com) original revision. Note: The latest revision uses React and Node app for isomophic server-side rendering, thus, not based on this code base.
 
 ## Libraries
 * webpack/babel
@@ -26,4 +26,4 @@ The website is not compatible with Internet Explorer 11 or older.
 
 ## Maintainer
 
-Todd Oh (toddstonefieldoh@gmail.com) [twitter](https://twitter.com/_toddoh)
+Todd Oh (toddstonefieldoh@gmail.com) [twitter](https://twitter.com/tstonefieldoh)
