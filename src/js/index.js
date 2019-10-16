@@ -23,10 +23,6 @@ const render_core = () => {
         { id: 'nav-section-theyear', name: 'TheYear', path: 'theyear' }
     ];
 
-    const projectSections = [
-        { id: 'nav-section-whattrumpsaid', name: 'WhatTrumpSaid', path: 'whattrumpsaid' }
-    ];
-
     const labSections = [
         { id: 'nav-section-datatodaycluster', name: 'HourlyClusters', path: 'lab?type=hourlycluster' },
         { id: 'nav-section-datatodaycluster', name: 'Backend', path: 'lab' }
@@ -50,16 +46,6 @@ const render_core = () => {
                     <p class="section-guide">REGULAR</p>
                     <ul class="sections-list">
                         ${contentSections.map((i) => html`
-                            <li data-sectionid="${i.id}"><a href="#${i.path}">${i.name}</a></li>
-                        `
-        )}
-                    </ul>
-                </div>
-
-                <div class="sections-group projects">
-                    <p class="section-guide">PROJECTS</p>
-                    <ul class="sections-list projects">
-                        ${projectSections.map((i) => html`
                             <li data-sectionid="${i.id}"><a href="#${i.path}">${i.name}</a></li>
                         `
         )}
