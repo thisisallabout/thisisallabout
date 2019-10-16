@@ -65,7 +65,6 @@ const render_core = () => {
                 <div class="sections-group about">
                     <ul class="sections-tiaainfo">
                         <li><a href="#about">About</a></li>
-                        <li><a href="mailto:toddstonefieldoh@gmail.com">Contact</a></li>
                     </ul>
                 </div>
             </div>
