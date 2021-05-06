@@ -45,7 +45,7 @@
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
     "social-likes-next": "^1.1.0",
-    "ua-parser-js": "^0.7.19",
+    "ua-parser-js": "^0.7.24",
     "whatwg-fetch": "^2.0.4"
   },
   "browserslist": [
