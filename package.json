@@ -43,7 +43,7 @@
     "lit-html": "^0.10.2",
     "lodash": ">=4.17.11",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.23",
+    "moment-timezone": "^0.5.35",
     "social-likes-next": "^1.1.0",
     "ua-parser-js": "^0.7.19",
     "whatwg-fetch": "^2.0.4"
