@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "babel-loader": "^8.0.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "file-loader": "^1.1.11",
     "jquery": ">=3.4.0",
     "jsoneditor": "^5.28.2",
